@@ -5,19 +5,8 @@
         "ts-jest": "^27.0.4",
         "typescript": "^4.3.5"
     },
-
-    "jest": {
-    "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": ["ts", "tsx", "js"]
-  },
-
     "scripts": {
-        "test": "jest --coverage",
+        "test": "jest",
         "test:watch": "jest --watch"
     }
-
-
 }

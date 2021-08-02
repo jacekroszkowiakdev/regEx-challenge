@@ -1,3 +1,7 @@
 chop.js
 index.js
+<<<<<<< HEAD
 node_modules/
+=======
+node_modules/*
+>>>>>>> dc3695de2a3adcba4ec66ca8f617f515efd7b65c

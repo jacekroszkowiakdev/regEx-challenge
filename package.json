@@ -1,6 +1,23 @@
 {
-  "devDependencies": {
-    "jest": "^27.0.6",
-    "typescript": "^4.3.5"
-  }
+    "devDependencies": {
+        "@types/jest": "^26.0.24",
+        "jest": "^27.0.6",
+        "ts-jest": "^27.0.4",
+        "typescript": "^4.3.5"
+    },
+
+    "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": ["ts", "tsx", "js"]
+  },
+
+    "scripts": {
+        "test": "jest --coverage",
+        "test:watch": "jest --watch"
+    }
+
+
 }

@@ -1,3 +1,5 @@
+const WRONG_ARG_TYPE_MSG = 'The input arguments are of wrong type. Please provide the input in right format!'
+const MISSING_ARGS_MSG = 'template and dataset are mandatory parameters'
 
 export interface IDataSet {
     bread: string | number;
@@ -9,12 +11,12 @@ function isEmpty(obj: object): boolean {
 }
 
 const chop = (
-    template: string,
+    template: string,§
     dataset: IDataSet
 ): string | number => {
     // check if parameters are not empty
     if (!template || isEmpty(dataset)) {
-        return "template and dataset are mandatory parameters";
+        return MISSING_ARGS_MSG;
     }
 
     // check if parameters are of correct type:
@@ -22,7 +24,7 @@ const chop = (
         typeof template !== "string" ||
         (typeof dataset !== "object" && typeof dataset !== null)
     ) {
-        return "The input arguments are of wrong type. Arguments can be only of type string and object";
+        return WRONG_ARG_TYPE_MSG;
     }
 
     // parse the template:
